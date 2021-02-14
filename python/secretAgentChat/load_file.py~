@@ -1,0 +1,13 @@
+def load_file(filename):
+    """Function to load a sheet from OTP."""
+    try:
+        with open(filename, "r") as fin:
+            contents = fin.read().splitlines()
+        return contents
+    except FileNotFoundError as file_not_found_error:
+        print(file_not_found_error)
+    else:
+        print("")
+    finally:
+        print(f"{filename} loaded successfully" )
+        
